@@ -18,10 +18,8 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
@@ -34,6 +32,9 @@
 
             <!-- Page Content -->
             <main>
+
+                @include('layouts.partials.aside-nav')
+
                 {{ $slot }}
             </main>
         </div>
